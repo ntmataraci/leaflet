@@ -122,7 +122,7 @@ selectedRow()
 function selectedRow(){
 let selectRow=document.querySelectorAll(".row")
 selectRow.forEach((x,idx)=>{
-    x.addEventListener("mouseenter",(e)=>{
+    x.addEventListener("click",(e)=>{
       let autoZoomLat= JSON.parse(localStorage.getItem("leaflet"))[idx].lat
       let autoZoomLng=JSON.parse(localStorage.getItem("leaflet"))[idx].lng
       map.panTo(new L.LatLng(autoZoomLat,autoZoomLng))
